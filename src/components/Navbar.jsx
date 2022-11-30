@@ -1,7 +1,7 @@
 import React from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
-import theme from '../utils/Theme'
+//import theme from '../utils/Theme'
 import styled from '@emotion/styled';
 
 
@@ -18,12 +18,13 @@ const Wrapper = styled.div`
  height: 100%;
  padding: 0px 20px;
  position: relative;
+ 
 
  `
 
 
 const Search = styled.div`
-width: 40px;
+width: 40%;
 position: absolute;
 left: 50px;
 right: 0px;
@@ -50,7 +51,6 @@ const Button = styled.button`
  color: #086F83;
  border-radius: 3px;
  font-weight: 500px;
- margin-top: 10px;
  cursor: pointer;
  display:flex;
  align-items: center;
