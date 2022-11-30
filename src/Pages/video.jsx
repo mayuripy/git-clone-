@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ReplayIcon from '@mui/icons-material/Replay';
 import AddTaskIcon from '@mui/icons-material/AddTask';
+import { ThumbDown } from '@mui/icons-material';
 
 
  const  Container =styled.div`
@@ -23,7 +24,6 @@ import AddTaskIcon from '@mui/icons-material/AddTask';
  font-weight: 400; 
  margin-top: 20px;
  margin-bottom: 10px
- color: ${({ theme}) => theme.text}
  `;
 
 
@@ -35,7 +35,6 @@ import AddTaskIcon from '@mui/icons-material/AddTask';
  
  `;
  const Info = styled.span`
- color: ${({ theme}) => theme.textsoft}
  `;
  const Buttons = styled.div`
  display: flex;
@@ -48,8 +47,8 @@ import AddTaskIcon from '@mui/icons-material/AddTask';
  cursor: Pointer;
  `;
  const Hr = styled.hr`
- margin: 20px;
-  border: 0.5px solid ${({theme}) => theme.soft};
+  margin: 20px;
+  border: 0.5px solid white;
  
  `;
 
@@ -59,43 +58,43 @@ import AddTaskIcon from '@mui/icons-material/AddTask';
  
  `;
  const Video = () => {
-  return (<Container>
+  return (
+  <Container>
     <Content>
-      <VideoWrapper>
+      <Videowrapper>
+
         <iframe
-        width:"100%"
-        height:"720"
+        width="100%"
+        height="720"
         src="https://www.youtube.com/enbed/k3vfj-e1Ma4"
         title="youtube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipbord-writer; encrepted-medium; gyroscope; picture-in-picture "
         allowfullscreen
+        />
         
-        </VideoWrapper>
-      
+        </Videowrapper>
         </Content>
-        ></iframe>
 
       
       <Title>Test video</Title>
       <Details>
         <Info>7,948,154 views. jun 22,2022</Info>
         <Buttons>
-         <ThumbUpOutlinedIcon /> 123
-          <Botton>
-            <ThumUpOutlinedIcon /> Dislike
-          </Botton>
-          <Botton>
-            <ReplayOutlinedIcon /> Share
-          </Botton>
-          <Botton>
-            <AddTaskOutlinedIcon /> Save
-          </Botton>
+         <ThumbUpIcon /> 123
+          <Button>
+            <ThumbDown /> Dislike
+          </Button>
+          <Button>
+            <ReplayIcon /> Share
+          </Button>
+          <Button>
+            <AddTaskIcon /> Save
+          </Button>
         </Buttons>
       </Details>
       <Hr/>
-      </Content>
-    <RecommenDation>recommentation</RecommenDation>
+    <Recommendation>recommentation</Recommendation>
     </Container>
   
   );
