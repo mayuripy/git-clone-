@@ -1,8 +1,12 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
-//import theme from '../utils/Theme'
-import styled from '@emotion/styled';
+import VideoCallIcon from '@mui/icons-material/VideoCall';
+//import theme from '../utils/Theme';
+import {Link,Navigate,useNavigate } from 'react-router-dom';
+
+
 
 
 const Container = styled.div`
@@ -10,7 +14,7 @@ const Container = styled.div`
  top: 0;
  height: 56px;
 
-`
+`;
 const Wrapper = styled.div`
  display: flex; 
  align-items: center;
@@ -20,13 +24,17 @@ const Wrapper = styled.div`
  position: relative;
  
 
+ `;
+
+ const User = styled.div`
+  color: white
  `
 
 
 const Search = styled.div`
 width: 40%;
 position: absolute;
-left: 50px;
+left: 0px;
 right: 0px;
 margin: auto;
 display: flex;
@@ -37,11 +45,12 @@ border: 1px solid #ccc;
 border-radius: 3px;
 
 
-`
+`;
 const Input = styled.input`
 border: none;
 bacground-color: transparet;
-` 
+
+` ;
 
 
 const Button = styled.button`
@@ -59,6 +68,7 @@ const Button = styled.button`
 
 
 const Navbar = () => {
+  const navigate = useNavigate();
     return (
        <Container>
        <Wrapper>
@@ -66,17 +76,27 @@ const Navbar = () => {
           <Input placeholder="search"/>
           <SearchIcon/>
          </Search>
+         <User>
+           <VideoCallIcon onclick={()=> Navigate(`/search?=${'xyz'}`)} />
+         </User>
+          {/* <Link to="signin" styled={{ textDecoration: "none"}}> */}
+          <Link to="signin" >
          <Button>
             <AccountCircleIcon />
                   SIGN IN
         </Button>
+        </Link>
+        {/* </Link> */}
+        
+        
             </Wrapper>
         </Container>
+        
 
           
-    )
+    );
 
-}
+};
  
 
 export default Navbar;

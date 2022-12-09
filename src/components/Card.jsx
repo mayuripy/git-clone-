@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const Container =styled.div`
-  width: ${(props)=>props.type === "sm" ? "360px" : "500px"};
+  width: ${(props)=>props.type !== "sm" ? "360px" : "500px"};
   margin-bottom: ${(props)=>props.type === "sm" ? "45px" : "80px"};
   cursor: pointer;
-  display: ${(props)=>props.type === "sm" && "flex"};
+  display: ${(props)=>props.type === "sm" ? "100px": "202px"};
   gap: 10px;
 
 `;
@@ -26,14 +26,15 @@ const Texts = styled.div`
 `;
 
 const Info = styled.div`
-  background-color: transparent;;
-`
+  background-color: transparent;
+`;
 
 
 const Details =styled.div`
   display: flex;
-  margin-top: ${(props)=>props.type === "sm" && "16px"};
+  margin-top: ${(props)=>props.type !== "sm" && "16px"};
   gap: 12px;
+  flex: 1;
 
   
 `;
