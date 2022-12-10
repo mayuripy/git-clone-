@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Comment from './Comment';
 
-const Container = styled.div`
-`;
+const Container = styled.div``;
+
 const NewComment = styled.div`
 display: flex;
 align-items: center;

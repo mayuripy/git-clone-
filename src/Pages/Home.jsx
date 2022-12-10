@@ -6,8 +6,9 @@ import Card from '../components/Card';
 const Container = styled.div`
   display: grid;
   justify-content: space-between;
+  flex-wrap: wrap;
 
-`
+`;
 
 
  const Home = () => {
@@ -28,8 +29,8 @@ const Container = styled.div`
       <Card/>
       <Card/>
     </Container>
-  )
- }
+  );
+ };
 
   
  export default Home;
